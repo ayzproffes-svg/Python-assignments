@@ -1,0 +1,4 @@
+bad lines   0%:  EAFP     123 ns/line   LBYL      93 ns/line
+bad lines   1%:  EAFP     130 ns/line   LBYL      90 ns/line
+bad lines  10%:  EAFP     184 ns/line   LBYL      89 ns/line
+bad lines  50%:  EAFP     434 ns/line   LBYL      86 ns/line

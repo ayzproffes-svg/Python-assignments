@@ -1,0 +1,13 @@
+test_invalid (__main__.EmailTests.test_invalid) ... ok
+test_valid (__main__.EmailTests.test_valid) ... ok
+test_damaged (__main__.ParseTests.test_damaged) ... ok
+test_duplicate (__main__.ParseTests.test_duplicate) ... ok
+test_good_line (__main__.ParseTests.test_good_line) ... ok
+test_no_events (__main__.ParseTests.test_no_events) ... ok
+test_events_files_written (__main__.RunTests.test_events_files_written) ... ok
+test_missing_and_bad_files_do_not_stop_run (__main__.RunTests.test_missing_and_bad_files_do_not_stop_run) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

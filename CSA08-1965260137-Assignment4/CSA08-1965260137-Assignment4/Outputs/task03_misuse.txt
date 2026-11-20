@@ -1,0 +1,3 @@
+Misused version returns: 0 (true answer is 2, no error shown!)
+Version with specific except:
+  UnboundLocalError (a NameError subclass): cannot access local variable 'presnt' where it is not associated with a value

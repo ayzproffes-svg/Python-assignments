@@ -1,0 +1,28 @@
+1. Tuple keys: Egmore
+   Chennai Central  lat=13.0827 lon=80.2707
+   T. Nagar         lat=13.0418 lon=80.2341
+   Egmore           lat=13.0732 lon=80.2609
+   Chromepet        lat=12.9941 lon=80.1709
+2. bad : [[5, 0, 0], [5, 0, 0], [5, 0, 0]] | ids of rows: [41184, 41184, 41184] | bad[0] is bad[1]: True
+   good: [[5, 0, 0], [0, 0, 0], [0, 0, 0]] | ids of rows: [13952, 14016, 14080] | good[0] is good[1]: False
+3. Aliasing / shallow / deep copy
+   orig  : [[99, 2], [3, 4], [5, 6]]
+   alias : [[99, 2], [3, 4], [5, 6]] (same object: True )
+   copy.copy  : [[99, 2], [3, 4]] (inner shared: True )
+   slice [:]  : [[99, 2], [3, 4]] (inner shared: True )
+   deepcopy   : [[1, 2], [3, 4]] (inner shared: False )
+4. After add_stop + rebind, caller's list: ['A', 'B', 'New Stop']
+5. Tuple containing a list
+   t[0]=2 -> TypeError: 'tuple' object does not support item assignment
+   t[1].append(30) works -> (1, [10, 20, 30])
+   t[1] += [40] -> TypeError: 'tuple' object does not support item assignment | but t is now (1, [10, 20, 30, 40])
+6. Memory with sys.getsizeof (1,000,000 values)
+   list : 8000056 bytes | tuple: 8000040 bytes
+   empty list 56 | empty tuple 40
+7. Timing (best of 5, seconds)
+   create list(range(1e6)) : 0.022520
+   create tuple(range(1e6)): 0.021443
+   index 100,000 times list : 0.001942
+   index 100,000 times tuple: 0.002024
+8. Alternative: sparse dict grid
+   {(0, 1): 2, (2, 2): 1} | size grid 1000x1000 list-of-lists: 8064856 bytes (outer+rows) vs dict of 3 entries: 224 bytes

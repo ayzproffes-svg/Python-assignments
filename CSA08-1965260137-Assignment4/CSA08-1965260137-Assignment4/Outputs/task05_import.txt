@@ -1,0 +1,7 @@
+first import of attendance.stats (loads package + sub-module):    158.0 us
+second import (found in sys.modules cache):                         0.5 us
+in sys.modules: ['attendance', 'attendance.stats']
+form 1 call: attendance.stats.percentage(3, 4) = 75.0
+form 2 call: stats.percentage(3, 4)            = 75.0
+form 3 call: percentage(3, 4)                  = 75.0
+all three refer to the same function object: True

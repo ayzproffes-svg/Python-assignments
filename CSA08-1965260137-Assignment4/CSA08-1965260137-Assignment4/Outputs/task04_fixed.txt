@@ -1,0 +1,14 @@
+bad file ok?    False
+missing file ok? False
+--- returns.log ---
+Python Crash Course
+Don Quixote
+Wings of Fire
+Godan
+Malgudi Days
+Two States
+--- errors.log (first line of each entry) ---
+2026-11-12 11:24:43,833 ERROR could not process bad.txt: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2026-11-12 11:24:43,834 ERROR day file missing: absent.txt
+save_returns: write failed, file closed afterwards? True
+save_returns_try_finally: write failed, file closed afterwards? True

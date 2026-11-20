@@ -1,0 +1,2 @@
+# Only the Python standard library is used (random, time, sys, copy, re, collections).
+# No third-party packages are required.

@@ -1,0 +1,18 @@
+Weeks: 53 | first 5 totals: [93.3, 95.0, 23.2, 0.0, 139.7]
+Wettest week: #42 (209.7 mm)
+Driest week : #4 (0.0 mm)
+Max reading 59.1 mm at index 238; min 0.0 mm at index 0
+Moving-average values: 359 first 3: [13.33, 13.33, 10.51]
+Naive == running: True
+Dry days: 208 first 10 indices: [0, 2, 3, 4, 6, 7, 10, 13, 14, 15]
+readings[7:14] -> [0.0, 26.2, 0.6, 0.0, 14.1, 54.1, 0.0]
+readings[-7:]  -> [23.0, 0.0, 0.0, 0.0, 53.0, 30.9, 28.0]
+readings[::7]  -> 53 values, first 5: [0.0, 0.0, 0.0, 0.0, 0.0]
+--- edge cases ---
+empty: weekly [] | max_min None | MA [] | dry []
+short(4): weekly [7.0] | MA naive [] | MA running []
+--- timing (best of 5, seconds) ---
+n | naive_s | running_s | additions naive 6(n-6) | operations running 6+2(n-7)
+365 | 0.000076 | 0.000021 | 2154 | 722
+36500 | 0.008553 | 0.002304 | 218964 | 72992
+365000 | 0.085237 | 0.027127 | 2189964 | 729992

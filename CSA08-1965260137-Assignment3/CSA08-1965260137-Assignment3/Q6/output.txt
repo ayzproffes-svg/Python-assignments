@@ -1,0 +1,23 @@
+No.      Name                   Days    Route (station arr/dep)
+12615    Grand Trunk Express    3       Chennai Central -/18:35 > Katpadi 20:48/20:50 > Vijayawada 01:05/01:15 > Nagpur 10:20/10:30 > New Delhi 06:35/-
+12007    Shatabdi Express       7       Chennai Central -/06:00 > Katpadi 07:43/07:45 > Bengaluru 11:00/-
+12627    Karnataka Express      3       Bengaluru -/19:20 > Katpadi 22:03/22:05 > Chennai Central 23:30/-
+12639    Brindavan Express      6       Chennai Central -/07:50 > Arakkonam 08:50/08:52 > Katpadi 09:50/09:55 > Bengaluru 13:25/-
+12163    Dadar Express          2       Chennai Central -/20:10 > Katpadi 22:15/22:20 > Mumbai Dadar 16:00/-
+third station departure of 12615: 01:15
+--- Katpadi on Wed, sorted by departure ---
+  ('12007', 'Shatabdi Express', '07:43', '07:45')
+  ('12639', 'Brindavan Express', '09:50', '09:55')
+  ('12615', 'Grand Trunk Express', '20:48', '20:50')
+  ('12163', 'Dadar Express', '22:15', '22:20')
+indexed result equal: True
+--- edge cases ---
+unknown station: [] []
+train not running (Dadar Express, Mon at Katpadi): []
+--- timing: 200 queries, seconds per query ---
+trains | total stops | no index | with index | index memory (bytes)
+100 | 800 | 0.0000179 | 0.0000006 | 32416
+1000 | 8000 | 0.0001688 | 0.0000066 | 95728
+10000 | 80000 | 0.0021315 | 0.0001335 | 710864
+--- alternative: flat list of tuples, scanned per query ---
+flat list of 80000 stops, one query: 0.001284 s | list memory 711960 bytes (outer only)

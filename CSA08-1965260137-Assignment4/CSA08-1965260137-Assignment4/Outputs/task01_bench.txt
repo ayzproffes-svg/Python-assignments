@@ -1,0 +1,5 @@
+file size: 1539 KB, lines: 50000
+f.read() + split           time    10.4 ms   peak memory      5468 KB
+f.readlines()              time     9.7 ms   peak memory      3989 KB
+line-by-line (mess_bill)   time    36.9 ms   peak memory      3452 KB
+iteration only (no report) peak memory      21.3 KB

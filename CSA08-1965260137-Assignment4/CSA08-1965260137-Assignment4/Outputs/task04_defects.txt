@@ -1,0 +1,12 @@
+== Defects 1 and 2: three days processed ==
+'Malgudi DaysTwo States'
+-> day 1 and day 2 are gone ('w' truncates); titles are glued together (no newline written)
+
+== Defect 3: write() fails, what happens to the open file? ==
+TypeError escaped process(): write() argument must be str, not int
+log file closed? False -> the handle is left open (close() was skipped)
+
+== Defect 4: an error is not recorded ==
+UnicodeDecodeError crashed the program; nothing was saved to any log: invalid start byte
+missing
+-> only 'missing' printed to the screen: no file name, no time, nothing saved

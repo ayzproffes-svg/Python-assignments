@@ -1,0 +1,16 @@
+top 3: [('seeds', 3), ('price', 2), ('received', 2)]
+get == setdefault == Counter == list.count: True
+--- edge cases ---
+empty text: {} | no texts: {}
+case: {'seeds': 3}
+punctuation: {'seeds': 3}
+--- grouping ---
+per district: {'Salem': 2, 'Erode': 1, 'Madurai': 1}
+per crop    : {'paddy': ['seeds late', 'loan delay'], 'cotton': ['pest attack', 'price low']}
+--- views ---
+keys(): dict_keys(['a', 'b', 'c']) | values(): dict_values([1, 2, 3]) | items(): dict_items([('a', 1), ('b', 2), ('c', 3)]) (views are live)
+--- timing (best of 3, seconds) ---
+n | dict.get | setdefault | list.count | Counter
+1000 | 0.0037 | 0.0049 | 0.0053 | 0.0043
+10000 | 0.0213 | 0.0242 | 0.0300 | 0.0217
+100000 | 0.2210 | 0.2456 | 0.3464 | 0.2185

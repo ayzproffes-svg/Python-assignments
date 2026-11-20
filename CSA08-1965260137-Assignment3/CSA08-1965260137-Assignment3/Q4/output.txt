@@ -1,0 +1,22 @@
+raw list: 6 -> set: 4 ['192311001', '192311004', '192311007', '192311009']
+--- small case (verified by hand in report) ---
+A|B : ['192311001', '192311002', '192311004', '192311007', '192311009', '192311010']
+A&B : ['192311004', '192311009']
+A-B : ['192311001', '192311007']
+B-A : ['192311002', '192311010']
+A^B : ['192311001', '192311002', '192311007', '192311010']
+none: ['192311003', '192311005', '192311006', '192311008']
+--- edge cases ---
+empty A, B   : & set() | ^ True | | True
+identical    : & True | ^ set() | - set()
+tuples in set: {(1, 2), (3, 4)} | list in set -> TypeError: unhashable type: 'list'
+--- x in list vs x in set (worst-case element, 100 lookups, seconds) ---
+n | list | set
+10000 | 0.00007654 | 0.0000000225
+100000 | 0.00076226 | 0.0000000258
+1000000 | 0.01089378 | 0.0000000384
+--- common students: nested loops vs & (seconds) ---
+n each | nested | sorted-walk | set &
+600 | 0.00272 | 0.00019 | 0.000007 | same=True
+2400 | 0.04085 | 0.00092 | 0.000045 | same=True
+6000 | 0.24865 | 0.00236 | 0.000154 | same=True

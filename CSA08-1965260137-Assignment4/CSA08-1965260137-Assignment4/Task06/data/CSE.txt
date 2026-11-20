@@ -1,0 +1,3 @@
+192311001,Arun Kumar,CSE,arun.kumar@college.edu,Dance;Quiz
+192311002,Bhavana S,CSE,bhavana@college.edu,Singing
+192311003,Charan R,CSE,charan.college.edu,Quiz;Drama

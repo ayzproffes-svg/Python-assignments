@@ -1,0 +1,5 @@
+CSE.txt:3: INVALID: invalid e-mail 'charan.college.edu'
+ECE.txt:2: DUPLICATE: register number 192311001 already registered
+ECE.txt:3: INVALID: expected 5 fields, found 4
+IT.txt:2: INVALID: invalid e-mail 'indu@@college.edu'
+EEE.txt:0: MISSING FILE: department file not found

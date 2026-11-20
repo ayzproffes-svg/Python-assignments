@@ -1,0 +1,5 @@
+good.csv -> (1, 1, [(2, 'expected 3 fields, found 2')])
+empty.csv -> AttendanceFileError: empty.csv: file is empty | cause: NoneType
+binary.csv -> AttendanceFileError: binary.csv: not valid UTF-8 text | cause: UnicodeDecodeError
+missing.csv -> AttendanceFileError: missing.csv: file or folder does not exist | cause: FileNotFoundError
+tmpg9hm84r8 -> AttendanceFileError: /tmp/tmpg9hm84r8: is a folder, not a file | cause: IsADirectoryError

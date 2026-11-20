@@ -1,0 +1,31 @@
+result: {'total': 10, 'accepted': 6, 'duplicates': 1, 'invalid': 3, 'missing': ['EEE.txt']}
+
+--- output/summary.txt ---
+FEST REGISTRATION SUMMARY
+lines read      : 10
+accepted        : 6
+duplicates      : 1
+invalid/damaged : 3
+missing files   : EEE.txt
+participants per event:
+  Dance: 3
+  Drama: 1
+  Photography: 2
+  Quiz: 2
+  Singing: 2
+
+--- output/errors.log ---
+CSE.txt:3: INVALID: invalid e-mail 'charan.college.edu'
+ECE.txt:2: DUPLICATE: register number 192311001 already registered
+ECE.txt:3: INVALID: expected 5 fields, found 4
+IT.txt:2: INVALID: invalid e-mail 'indu@@college.edu'
+EEE.txt:0: MISSING FILE: department file not found
+
+--- output/master_list.csv ---
+reg_no,name,dept,email,events
+192311001,Arun Kumar,CSE,arun.kumar@college.edu,Dance;Quiz
+192311002,Bhavana S,CSE,bhavana@college.edu,Singing
+192312001,Divya M,ECE,divya@college.edu,Dance;Drama
+192313001,Farhan A,MECH,farhan@college.edu,Quiz;Photography
+192313002,Gita P,MECH,gita@college.edu,Singing;Dance
+192314001,Hari K,IT,hari@college.edu,Photography

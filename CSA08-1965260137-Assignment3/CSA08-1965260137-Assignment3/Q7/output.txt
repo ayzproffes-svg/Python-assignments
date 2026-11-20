@@ -1,0 +1,15 @@
+norm_number: ['9840012345', '9840012345', '9840012345', None, None]
+norm_name  : ['ravi', 'ravi kumar', 'ravi kumar', '']
+input contacts: 9 -> merged people: 4
+   ['anu'] [] []
+   ['meena', 'meena s'] ['9003055555'] ['meena.s@x.in']
+   ['ravi', 'ravi k', 'ravi kumar'] ['4423456789', '9840012345'] ['ravi@mail.com']
+   ['ravi kumar'] ['9999911111'] []
+pairwise people (contacts with a number/e-mail only): 3 | dict merge for same contacts: 3
+--- empty / bad input ---
+empty list: [] | all missing: 2
+--- timing ---
+n | people (expected) | dict merge s | pairwise s
+1000 | 600 (600) | 0.0095 | 0.0768 | equal=True
+5000 | 3000 (3000) | 0.0290 | 1.0636 | equal=True
+100000 | 59982 (60000) | 0.8708 | ~451 (extrapolated, n^2)

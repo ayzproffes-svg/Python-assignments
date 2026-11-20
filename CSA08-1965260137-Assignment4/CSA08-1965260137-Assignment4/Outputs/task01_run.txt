@@ -1,0 +1,20 @@
+### original_script.py
+Bhavana S 1300
+Farhan A -50
+
+Total 1250
+
+### mess_bill.py
+Arun Kumar 1250.50
+Bhavana S 1300.00
+Divya M 1180.75
+Gita P 1420.25
+Total 5151.50
+
+3 line(s) rejected:
+  line 3: '192311003,Charan R,abc' -> amount is not a number
+  line 5: '192311005,Elan V' -> expected 3 fields, found 2
+  line 6: '192311006,Farhan A,-50' -> negative amount
+
+### mess_bill.py nofile.txt
+File not found: nofile.txt

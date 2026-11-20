@@ -1,0 +1,19 @@
+organisation (a): reports written to output_a - 5 students, 2 damaged lines
+organisation (b): reports written to ../output_b - 5 students, 2 damaged lines
+organisation (c): reports written to ../output_c - 5 students, 2 damaged lines
+organisation (d): reports written to ../output_d - 5 students, 2 damaged lines
+attendance_report.csv: a == b
+attendance_report.csv: a == c
+attendance_report.csv: a == d
+below_75.csv: a == b
+below_75.csv: a == c
+below_75.csv: a == d
+damaged_lines.log: a == b
+damaged_lines.log: a == c
+damaged_lines.log: a == d
+absent_3_days.csv: a == b
+absent_3_days.csv: a == c
+absent_3_days.csv: a == d
+--- absent_3_days.csv
+register_no,longest_absent_run
+192311003,3

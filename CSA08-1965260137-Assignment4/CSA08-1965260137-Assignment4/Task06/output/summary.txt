@@ -1,0 +1,12 @@
+FEST REGISTRATION SUMMARY
+lines read      : 10
+accepted        : 6
+duplicates      : 1
+invalid/damaged : 3
+missing files   : EEE.txt
+participants per event:
+  Dance: 3
+  Drama: 1
+  Photography: 2
+  Quiz: 2
+  Singing: 2
